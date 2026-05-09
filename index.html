@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0a0a1a">
+  <title>Fútbol 3D</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="loading">
+    <div id="loading-logo">⚽</div>
+    <div id="loading-title">FÚTBOL 3D</div>
+    <div id="loading-text">Cargando estadio...</div>
+    <div id="loading-bar-container"><div id="loading-bar"></div></div>
+  </div>
+
+  <div id="ui">
+    <div id="scoreboard">
+      <div class="team-info" id="home-team">
+        <span class="team-name">TÚ</span>
+        <span class="team-score" id="home-score">0</span>
+      </div>
+      <div id="timer">05:00</div>
+      <div class="team-info" id="away-team">
+        <span class="team-score" id="away-score">0</span>
+        <span class="team-name">CPU</span>
+      </div>
+    </div>
+    <div id="message"></div>
+    <div id="possession-bar">
+      <div id="possession-home"></div>
+      <div id="possession-away"></div>
+    </div>
+  </div>
+
+  <div id="controls-left">
+    <div id="joystick-zone">
+      <div id="joystick-outer">
+        <div id="joystick-inner"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="controls-right">
+    <button id="btn-trick" class="action-btn btn-top-left">TRUCO</button>
+    <button id="btn-shoot" class="action-btn btn-top-right">TIRO</button>
+    <button id="btn-sprint" class="action-btn btn-bot-left">SPRINT</button>
+    <button id="btn-pass" class="action-btn btn-bot-right">PASE</button>
+  </div>
+
+  <canvas id="game-canvas"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/stadium.js"></script>
+  <script src="js/ball.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/camera.js"></script>
+  <script src="js/gameManager.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
